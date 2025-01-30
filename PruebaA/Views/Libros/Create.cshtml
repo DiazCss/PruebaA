@@ -1,0 +1,78 @@
+﻿@model PruebaA.Models.Libros
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container mt-5">
+    <h1 class="text-center text-primary">Crear Libro</h1>
+    <h4 class="text-center text-muted">Complete el formulario para agregar un nuevo libro</h4>
+    <hr />
+
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <form asp-action="Create" class="bg-light p-4 rounded shadow-sm">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <!-- Campo Oculto Id -->
+                <div class="form-group mb-3">
+                    <label asp-for="Id" class="form-label"></label>
+                    <input type="hidden" asp-for="Id" class="form-control" />
+                    <span asp-validation-for="Id" class="text-danger"></span>
+                </div>
+
+                <!-- Selección de Autor -->
+                <div class="form-group mb-3">
+                    <label asp-for="AutorId" class="form-label">Seleccionar Autor</label>
+                    <select asp-for="AutorId" asp-items="ViewBag.Autores" class="form-control">
+                        <option value="">Seleccione un autor</option>
+                    </select>
+                    <span asp-validation-for="AutorId" class="text-danger"></span>
+                </div>
+
+                <!-- Título del Libro -->
+                <div class="form-group mb-3">
+                    <label asp-for="Titulo" class="form-label">Título</label>
+                    <input asp-for="Titulo" class="form-control" placeholder="Ingrese el título del libro" />
+                    <span asp-validation-for="Titulo" class="text-danger"></span>
+                </div>
+
+                <!-- Editorial -->
+                <div class="form-group mb-3">
+                    <label asp-for="Editorial" class="form-label">Editorial</label>
+                    <input asp-for="Editorial" class="form-control" placeholder="Ingrese la editorial del libro" />
+                    <span asp-validation-for="Editorial" class="text-danger"></span>
+                </div>
+
+                <!-- Edición -->
+                <div class="form-group mb-3">
+                    <label asp-for="Edicion" class="form-label">Edición</label>
+                    <input asp-for="Edicion" class="form-control" placeholder="Ingrese la edición del libro" />
+                    <span asp-validation-for="Edicion" class="text-danger"></span>
+                </div>
+
+                <!-- Clasificación -->
+                <div class="form-group mb-4">
+                    <label asp-for="Clasificacion" class="form-label">Clasificación</label>
+                    <input asp-for="Clasificacion" class="form-control" placeholder="Ingrese la clasificación del libro" />
+                    <span asp-validation-for="Clasificacion" class="text-danger"></span>
+                </div>
+
+                <!-- Botón de Submit -->
+                <div class="form-group text-center">
+                    <input type="submit" value="Crear Libro" class="btn btn-primary btn-lg w-100" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="text-center mt-4">
+        <a asp-action="Index" class="btn btn-link">Volver a la lista</a>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

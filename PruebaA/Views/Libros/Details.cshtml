@@ -1,0 +1,61 @@
+﻿@model PruebaA.Models.Libros
+
+@{
+    ViewData["Title"] = "Detalles del Libro";
+}
+
+<div class="container mt-5">
+    <h1 class="text-center text-info">Detalles del Libro</h1>
+    <hr />
+
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6 bg-light p-4 rounded shadow-sm">
+            <h4 class="text-primary">Información del Libro</h4>
+            <dl class="row">
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.Id)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.Id)
+                </dd>
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.AutorId)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.AutorId)
+                </dd>
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.Titulo)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.Titulo)
+                </dd>
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.Editorial)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.Editorial)
+                </dd>
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.Edicion)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.Edicion)
+                </dd>
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.Clasificacion)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.Clasificacion)
+                </dd>
+            </dl>
+
+            <!-- Opciones de navegación -->
+            <div class="text-center mt-4">
+                <a asp-action="Edit" class="btn btn-warning btn-lg">Editar</a>
+                <span class="mx-3">|</span>
+                <a asp-action="Index" class="btn btn-link btn-lg">Volver a la lista</a>
+            </div>
+        </div>
+    </div>
+</div>

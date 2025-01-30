@@ -1,0 +1,74 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container mt-5 text-center">
+    <h1 class="display-4 ">📚 Bienvenido</h1>
+
+    <div class="mt-4">
+        <!-- Botón para ir a Autores -->
+        <a href="/Autores" class="btn btn-dark btn-lg shadow me-3" style="font-size: 18px; padding: 12px 25px; border-radius: 50px; background-color: #3b3b3b;">
+            📖 Autores
+        </a>
+
+        <!-- Botón para ir a Libros -->
+        <a href="/Libros" class="btn btn-primary btn-lg shadow" style="font-size: 18px; padding: 12px 25px; border-radius: 50px; background-color: #007bff;">
+            📚 Libros
+        </a>
+    </div>
+
+    
+
+</div>
+
+<style>
+    body {
+        background-color: #f0f0f5;
+        font-family: 'Georgia', serif;
+    }
+
+    .container {
+        background: #ffffff;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        font-family: 'Merriweather', serif;
+        color: #343a40;
+    }
+
+    p {
+        font-size: 18px;
+        color: #555;
+        line-height: 1.6;
+    }
+
+    .btn {
+        font-weight: bold;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+        .btn:hover {
+            transform: scale(1.05);
+            background-color: #5a5a5a;
+        }
+
+    .btn-primary {
+        background-color: #007bff !important;
+    }
+
+    .btn-dark {
+        background-color: #3b3b3b !important;
+    }
+
+    img {
+        max-width: 100%;
+        border-radius: 10px;
+    }
+
+    .lead {
+        font-style: italic;
+    }
+</style>

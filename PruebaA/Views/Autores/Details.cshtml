@@ -1,0 +1,48 @@
+﻿@model PruebaA.Models.Autores
+
+@{
+    ViewData["Title"] = "Detalles del Autor";
+}
+
+<div class="container mt-5">
+    <h1 class="text-center">Detalles del Autor</h1>
+    <hr />
+
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6 bg-light p-4 rounded shadow-sm">
+            <h4 class="text-center">Información del Autor</h4>
+            <hr />
+            <dl class="row">
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.id)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.id)
+                </dd>
+
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Nombre)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Nombre)
+                </dd>
+
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Pais)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Pais)
+                </dd>
+            </dl>
+
+            <div class="form-group text-center">
+                <div class="mt-4">
+                    @Html.ActionLink("Editar", "Edit", new { id = Model.id }, new { @class = "btn btn-warning" })
+                </div>
+                <div class="mt-2">
+                    <a asp-action="Index" class="btn btn-link">Volver a la lista</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
